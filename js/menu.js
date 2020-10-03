@@ -17,3 +17,17 @@ jQuery(document).ready(function(){
 		});
 	}
 });
+
+(function(){
+	var src= [
+		'https://kainy.cn/js/common.js'
+	];
+	for(var i= src.length; i> 0; i--){
+		var c = document.createElement('script'); 
+		c.type = 'text/javascript';
+		c.defer = true;
+		c.src = src[i-1];
+		var h = document.getElementsByTagName('script')[0];
+		h.parentNode.insertBefore(c, h);
+	}
+})();
